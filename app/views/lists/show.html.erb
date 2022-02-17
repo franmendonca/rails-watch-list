@@ -1,0 +1,9 @@
+<h1><%= @list.name %></h1>
+<% @list.bookmarks.each do |bookmark| %>
+  <h3><%= bookmark.comment %> <%= link_to "Delete Bookmark", bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' } %></h3>
+  <h5>Title: <%= bookmark.movie.title %></h5>
+  <img src="<%= bookmark.movie.poster_url %>" alt="">
+  <p>Overview: <%= bookmark.movie.overview %></p>
+  <p>Rating: <%= bookmark.movie.rating %></p>
+<% end %>
+<%= link_to 'Go Back to main lists', lists_path, class: "btn btn-secondary"%>
