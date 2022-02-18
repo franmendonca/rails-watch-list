@@ -1,20 +1,3 @@
 <%= render "components/banner" %>
-<div class="wrapper">
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @lists.each do |list| %>
-      <tr>
-        <td><%= list.name %></td>
-        <td><%= link_to 'Show', list, class: "btn btn-secondary" %></td>
-        <td><%=link_to 'New Bookmark', new_list_bookmark_path(list), class: "btn btn-dark"%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-</div>
+<h2 class="text-center">List of genres available</h2>
+<%= render "components/main-card" %>
