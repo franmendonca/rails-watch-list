@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
   <% @lists.each do |list| %>
     <div class="card col-4">
-      <%= image_tag("theater", class: "card-img-top", alt: "list placeholder", size:"300x300") %>
+      <%= image_tag("theater.jpg", class: "card-img-top", alt: "list placeholder", size:"300x300") %>
       <div class="card-body">
         <h5 class="card-title"><%= list.name %></h5>
         <td><%= link_to 'Show', list, class: "btn btn-secondary" %></td>
